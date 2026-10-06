@@ -12,11 +12,9 @@ function exibir()
         repeticao = setInterval("repetir()",1000);
     }
 
-
 //funcao para rodar o relogio
 function repetir()
     {
-
         var hoje = new Date();
         var d = hoje.getDate();
         var m = hoje.getMonth();
@@ -30,7 +28,7 @@ function repetir()
         m++;
         //Colocando o 0 para os numeros sozinhos
         if (d < 10)
-            d = "0" + dia;
+            d = "0" + d;
         if (m < 10)
             m = "0" + m;
         if (h < 10)
@@ -47,13 +45,10 @@ function repetir()
         document.getElementById("minu").value = mt;
         document.getElementById("segu").value = s;
         document.getElementById("sem").value = dias_sem[se];
-        
     }
 
-
-    //funcao para para o relogio
+    //funcao parar para o relogio
     function parar()
     {
         clearInterval(repeticao);
     }
-
